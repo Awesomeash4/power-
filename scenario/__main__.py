@@ -118,7 +118,7 @@ HELP_MSG = "Click the button below to get help menu in your pm."
 START_MSG = "I'm awake already!\n<b>Haven't slept since:</b> <code>{}</code>"
     
 PM_START_TEXT = """
-────「 [Scenario](https://telegra.ph/file/7b8c52bd4c7b8b35ece20.jpg) 」────
+────「 [Kazuha](https://te.legra.ph/file/ea9fc34e474691b8dc511.jpg) 」────
 *Hola! {},*
 *I am {} Anime themed advance group management bot with a lot of Sexy Features.*
 ➖➖➖➖➖➖➖➖➖➖➖➖➖
@@ -140,20 +140,20 @@ buttons = [
                             url="https://t.me/ScenarioXbot?startgroup=true")
                     ],
                    [
-                       InlineKeyboardButton(text="☘️ ᴀʙᴏᴜᴛ ☘️", callback_data="scenario_"),
-                       InlineKeyboardButton(text="⚔️ ɪɴʟɪɴᴇ ⚔️", switch_inline_query_current_chat=""),
+                       InlineKeyboardButton(text="About", callback_data="scenario_"),
+                       InlineKeyboardButton(text="Inline", switch_inline_query_current_chat=""),
                      ],
                     [                  
                        InlineKeyboardButton(
-                             text="✨ sᴜᴘᴘᴏʀᴛ ✨",
+                             text="Support",
                              url=f"https://t.me/{SUPPORT_CHAT}"),
                        InlineKeyboardButton(
-                             text="✨ ᴜᴩᴅᴀᴛᴇs ✨",
+                             text="Updates",
                              url=f"https://t.me/{UPDATES_CHANNEL}")
                      ],
                      [
                          InlineKeyboardButton(
-                             text="🔰 ᴀʟʟ ᴄᴏᴍᴍᴀɴᴅs 🔰", callback_data="help_back"
+                             text="All Commands", callback_data="help_back"
                          ),
                      ],
     ]
@@ -353,7 +353,7 @@ def scenario_about_callback(update, context):
     first_name = update.effective_user.first_name
     if query.data == "scenario_":
         query.message.edit_text(
-            text=f"Hello dear {first_name}, My name is Scenario. A Powerful Telegram Group Management Bot.\n My developer - @TeamScenario\n\nIf you have any Question, You can join our support chat. \nMy developer will help you. \nCheck Link Below",
+            text=f"Hello dear {first_name}, My name is Kazuha. A Powerful Telegram Group Management Bot.\n My developer - @dumbbalak\n\nIf you have any Question, You can join our support chat. \nMy developer will help you. \nCheck Link Below",
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
                 [
