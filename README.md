@@ -40,7 +40,7 @@ Demo bot - @anonymous_4_robot
 <p><a href="https://github.com/TeamScenario/Scenario/fork"><img src="https://telegra.ph/file/8b61f6edc2a35c473ddff.jpg" alt="Press to Takeoff" width="490px"></a></p>
     
 <h4>Click the button below to deploy Scenario on Heroku!</h4>    
-<p align="center"><a href="https://dashboard.heroku.com/new?template=https://github.com/Awesomeash4/power"> <img src="https://img.shields.io/badge/Deploy%20On%20Heroku-black?style=for-the-badge&logo=heroku" width="220" height="38.45"/></a></p>
+<p align="center"><a href="https://dashboard.heroku.com/new?template=https://github.com/Awesomeash4/power-"> <img src="https://img.shields.io/badge/Deploy%20On%20Heroku-black?style=for-the-badge&logo=heroku" width="220" height="38.45"/></a></p>
 
 
 
