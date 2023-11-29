@@ -71,10 +71,9 @@ from telethon import Button, events
 @telethn.on(events.NewMessage(pattern="/alive"))
 async def awake(event):
   scenario = event.sender.first_name
-  scenario = "**♡ I,m scenario** \n\n"
-  scenario += "**♡ I'm Working With Awesome Speed**\n\n"
-  scenario += "**♡ Scenario: LATEST Version**\n\n"
-  scenario += "**♡ My Creator:** [TeamScenario](t.me/TeamScenario)\n\n"
+  scenario = "**I'm Kazuha** \n\n"
+  scenario += "**I'm working fine and awesome speed!**\n\n"  
+  scenario += "**My Master:** [TeamScenario](t.me/TeamScenario)\n\n"
   scenario += "**♡ Python-Telegram-Bot: v13.7**\n\n"
   scenario_BUTTON = [
       [
@@ -253,7 +252,7 @@ def start(update: Update, context: CallbackContext):
                     update.effective_chat.id,
                     HELPABLE[mod].__help__,
                     InlineKeyboardMarkup(
-                        [[InlineKeyboardButton(text="[► Back ◄]", callback_data="help_back")]]
+                        [[InlineKeyboardButton(text="Back", callback_data="help_back")]]
                     ),
                 )
 
@@ -410,7 +409,7 @@ def help_button(update, context):
         if mod_match:
             module = mod_match.group(1)
             text = (
-                "╒═══「☘️ help for *{}* ☘️」═══\n".format(
+                "HERE'S HELP FOR:\n".format(
                     HELPABLE[module].__mod_name__
                 )
                 + HELPABLE[module].__help__
@@ -420,7 +419,7 @@ def help_button(update, context):
                 parse_mode=ParseMode.MARKDOWN,
                 disable_web_page_preview=True,
                 reply_markup=InlineKeyboardMarkup(
-                    [[InlineKeyboardButton(text="[► Back ◄]", callback_data="help_back")]]
+                    [[InlineKeyboardButton(text="Back", callback_data="help_back")]]
                 ),
             )
 
@@ -471,7 +470,7 @@ def scenario_callback_data(update, context):
             reply_markup=InlineKeyboardMarkup(
                 [
                  [
-                    InlineKeyboardButton(text="[► Back ◄]", callback_data="scenario_back")
+                    InlineKeyboardButton(text="Back", callback_data="scenario_back")
                  ]
                 ]
             ),
@@ -527,7 +526,7 @@ def get_help(update, context):
             chat.id,
             text,
             InlineKeyboardMarkup(
-                [[InlineKeyboardButton(text="[► Back ◄]", callback_data="help_back")]]
+                [[InlineKeyboardButton(text="Back", callback_data="help_back")]]
             ),
         )
 
@@ -782,7 +781,7 @@ def main():
             updater.bot.set_webhook(url=URL + TOKEN)
 
     else:
-        LOGGER.info(f"scenario started, Using long polling. | BOT: [@{dispatcher.bot.username}]")
+        LOGGER.info(f"kazuha started, Using long polling. | BOT: [@{dispatcher.bot.username}]")
         updater.start_polling(timeout=15, read_latency=4, drop_pending_updates=True, allowed_updates=Update.ALL_TYPES)
 
     if len(argv) not in (1, 3, 4):
